@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chrome Extensions Showcase</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Dark Mode Styles */
+        body.dark-mode {
+            background-color: #333;
+            color: #f4f4f4; /* Ensuring text remains bright in dark mode */
+        }
+
+        .dark-mode .card {
+            background-color: #444;
+            color: #f4f4f4; /* Keeping card text bright in dark mode */
+        }
+
+        .dark-mode .button {
+            background-color: #0078d4;
+            color: #fff;
+        }
+
+        .dark-mode .button:hover {
+            background-color: #005fa1;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #333;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        /* Ensure header text remains bright in dark mode */
+        .dark-mode header h1,
+        .dark-mode header p {
+            color: #f4f4f4;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .extension-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-icon {
+            font-size: 4rem;
+            color: #0078d4;
+            margin-bottom: 15px;
+        }
+
+        .card-content h2 {
+            font-size: 1.5rem;
+            color: #0078d4;
+            margin-bottom: 10px;
+        }
+
+        .card-content p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .dark-mode .card-content p {
+            color: #f4f4f4; /* Make sure card text is bright in dark mode */
+        }
+
+        .button {
+            display: inline-block;
+            background: #0078d4;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .button:hover {
+            background: #005fa1;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .dark-mode footer {
+            color: #ccc;
+        }
+
+        /* Dark Mode Toggle Button */
+        .dark-mode-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #0078d4;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .dark-mode-toggle:hover {
+            background-color: #005fa1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CF Chrome Extensions</h1>
+        <p>Some Useful CF Code Extensions</p>
+    </header>
+    <main>
+        <div class="extension-list">
+            <div class="card">
+                <i class="fas fa-code card-icon"></i>
+                <div class="card-content">
+                    <h2>Codeforces Accepted Status</h2>
+                    <p>View your problem-solving status on Codeforces.</p>
+                    <a href="https://chromewebstore.google.com/detail/codeforces-accepted-statu/lclfamkhegbjgbmaefginodfepckkkme" target="_blank" class="button">Get Extension</a>
+                </div>
+            </div>
+            <div class="card">
+                <i class="fas fa-user-secret card-icon"></i>
+                <div class="card-content">
+                    <h2>CF Stalker</h2>
+                    <p>Track Codeforces user activities and performance.</p>
+                    <a href="https://chromewebstore.google.com/detail/cf-stalker/njjefmgmfomkdfkoiimnjbhckbjldihb" target="_blank" class="button">Get Extension</a>
+                </div>
+            </div>
+            <div class="card">
+                <i class="fas fa-carrot card-icon"></i>
+                <div class="card-content">
+                    <h2>Carrot</h2>
+                    <p>Analyze Codeforces problems with enhanced insights.</p>
+                    <a href="https://chromewebstore.google.com/detail/carrot/gakohpplicjdhhfllilcjpfildodfnnn" target="_blank" class="button">Get Extension</a>
+                </div>
+            </div>
+            <div class="card">
+                <i class="fas fa-tasks card-icon"></i>
+                <div class="card-content">
+                    <h2>Codeforces Practice Tracker</h2>
+                    <p>Track and manage your practice on Codeforces.</p>
+                    <a href="https://chromewebstore.google.com/detail/codeforces-practice-track/cnahgdhboflcnojgmeehhhfeoojifonm" target="_blank" class="button">Get Extension</a>
+                </div>
+            </div>
+            <div class="card">
+                <i class="fas fa-chart-bar card-icon"></i>
+                <div class="card-content">
+                    <h2>CF Analytics</h2>
+                    <p>Detailed analytics for Codeforces problems and contests.</p>
+                    <a href="https://chromewebstore.google.com/detail/cf-analytics/hhljbjodjdbjbggddjaidojnlmaobcpo" target="_blank" class="button">Get Extension</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Code_Red. All rights reserved by Ash.</p>
+    </footer>
+
+    <!-- Dark Mode Toggle Button -->
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+            const darkModeButton = document.querySelector('.dark-mode-toggle');
+            if (document.body.classList.contains('dark-mode')) {
+                darkModeButton.textContent = '☀️ Light Mode';
+            } else {
+                darkModeButton.textContent = '🌙 Dark Mode';
+            }
+        }
+    </script>
+</body>
+</html>
